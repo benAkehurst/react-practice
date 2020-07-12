@@ -12,7 +12,7 @@ describe('<Card />', () => {
     wrapper = shallow(<Card>Card</Card>);
   });
 
-  it('should render the compoent', () => {
+  it('should render the component', () => {
     expect(wrapper).toBeTruthy();
   });
 });
