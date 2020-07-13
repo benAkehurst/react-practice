@@ -1,41 +1,57 @@
 import React, { Component } from 'react';
-import modules from './Card.module.css';
+import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 import Aux from '../../../hoc/Aux/Aux';
+
+const StyledArticle = styled.article``;
+const CardMedia = styled.div``;
+const CardImage = styled.img``;
+const CardDate = styled.div``;
+const CardDateDay = styled.span``;
+const CardDateMonth = styled.span``;
+
+const CardContent = styled.div``;
+const CardContentHeader = styled.header``;
+const CardContentTitle = styled.h2``;
+const CardContentSubTitle = styled.div``;
+const CardContentExcerpt = styled.p``;
+
+const CardFooter = styled.footer``;
+const CardFooterPostDate = styled.span``;
+const CardFooterComments = styled.span``;
 
 class Card extends Component {
   render() {
     return (
       <Aux>
-        <article className={modules.card__straight}>
-          <div className={modules.card__media}>
-            <img src="http://placehold.it/300x300" alt="card media" />
-            <div className={modules.card__date}>
-              <span className={modules.date__day}>27</span>
-              <span className={modules.date__month}>Mar</span>
-            </div>
-            <span className={module.card__category}>Photos</span>
-          </div>
-          <div className="card__content">
-            <header className={module.card__header}>
-              <h2 className={module.card__title}>City Lights in New York</h2>
-              <div className={module.card__subtitle}>
+        <StyledArticle>
+          <CardMedia>
+            <CardImage src="http://placehold.it/300x300" alt="card media" />
+            <CardDate>
+              <CardDateDay>27</CardDateDay>
+              <CardDateMonth>Mar</CardDateMonth>
+            </CardDate>
+          </CardMedia>
+          <CardContent>
+            <CardContentHeader>
+              <CardContentTitle>City Lights in New York</CardContentTitle>
+              <CardContentSubTitle>
                 The city that never sleeps
-              </div>
-            </header>
-            <p className={module.card__excerpt}>
+              </CardContentSubTitle>
+            </CardContentHeader>
+            <CardContentExcerpt>
               New York, the largest city in the U.S., is an architectural marvel
               with plenty of historic monuments, magnificent buildings and
               countless dazzling skyscrapers.
-            </p>
+            </CardContentExcerpt>
 
-            <footer className={module.card__meta} role="contentinfo">
-              <span className={module.card__postDate}>6 min ago</span>
-              <span className={module.card__comments}>39 comments</span>
-            </footer>
-          </div>
-        </article>
+            <CardFooter>
+              <CardFooterPostDate>6 min ago</CardFooterPostDate>
+              <CardFooterComments>39 comments</CardFooterComments>
+            </CardFooter>
+          </CardContent>
+        </StyledArticle>
       </Aux>
     );
   }
