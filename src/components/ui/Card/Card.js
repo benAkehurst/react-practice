@@ -3,13 +3,9 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 import Aux from '../../../hoc/Aux/Aux';
+import CardMedia from './CardMedia/CardMedia';
 
 const StyledArticle = styled.article``;
-const CardMedia = styled.div``;
-const CardImage = styled.img``;
-const CardDate = styled.div``;
-const CardDateDay = styled.span``;
-const CardDateMonth = styled.span``;
 
 const CardContent = styled.div``;
 const CardContentHeader = styled.header``;
@@ -26,13 +22,7 @@ class Card extends Component {
     return (
       <Aux>
         <StyledArticle>
-          <CardMedia>
-            <CardImage src="http://placehold.it/300x300" alt="card media" />
-            <CardDate>
-              <CardDateDay>27</CardDateDay>
-              <CardDateMonth>Mar</CardDateMonth>
-            </CardDate>
-          </CardMedia>
+          <CardMedia></CardMedia>
           <CardContent>
             <CardContentHeader>
               <CardContentTitle>City Lights in New York</CardContentTitle>
