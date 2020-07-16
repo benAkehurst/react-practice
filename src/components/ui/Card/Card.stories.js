@@ -6,6 +6,7 @@ export default {
   title: 'Components / UI / Card',
 };
 
-// const buttonDefaults = {};
+// const CardDefaults = {};
 
-export const Small = () => <Card size={'small'}>Small Card</Card>;
+export const Straight = () => <Card></Card>;
+export const Curved = () => <Card edges={true}></Card>;
