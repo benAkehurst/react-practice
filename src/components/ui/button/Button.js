@@ -1,9 +1,15 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
 import PropTypes from 'prop-types';
+
+const StyledButton = styled.button`
+  opacity: ${(props) => (props.disabled ? '0.5' : '0')}
+  cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')}
+`;
 
 class Button extends Component {
   render() {
-    return <button>Button</button>;
+    return <StyledButton>Button</StyledButton>;
   }
 }
 
