@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 const StyledButton = styled.button`
   opacity: ${(props) => (props.disabled ? '0.5' : '0')}
   cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')}
+  border-radius: ${(props) => (props.corners ? '0px' : '4px')}
 `;
 
 class Button extends Component {
