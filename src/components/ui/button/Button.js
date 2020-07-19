@@ -6,6 +6,7 @@ const StyledButton = styled.button`
   opacity: ${(props) => (props.disabled ? '0.5' : '0')}
   cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')}
   border-radius: ${(props) => (props.corners ? '0px' : '4px')}
+  box-shadow: ${(props) => (props.shadow ? '' : '')}
 `;
 
 class Button extends Component {
@@ -23,13 +24,13 @@ Button.propTypes = {
   /**
    If `true`, the button is disabled
   */
-  corners: PropTypes.string,
+  corners: PropTypes.bool,
   /**
-   'rounded'
+   If `true`, the button has rounded corners
   */
-  shadow: PropTypes.string,
+  shadow: PropTypes.bool,
   /**
-   'shadow'
+   If `true`, the button will have a drop shadow
   */
   buttonType: PropTypes.string,
   /**
