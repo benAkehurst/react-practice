@@ -11,7 +11,13 @@ const StyledButton = styled.button`
 
 class Button extends Component {
   render() {
-    return <StyledButton>Button</StyledButton>;
+    return (
+      <StyledButton
+        onClick={this.props.clicked ? (e) => this.props.clicked(e) : null}
+      >
+        Button
+      </StyledButton>
+    );
   }
 }
 
