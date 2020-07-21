@@ -10,3 +10,8 @@ export default {
 
 export const Standard = () => <Button disabled={false}>Standard Button</Button>;
 export const Disabled = () => <Button disabled={true}>Disabled Button</Button>;
+export const Shadow = () => (
+  <Button disabled={false} shadow={true}>
+    Disabled Button
+  </Button>
+);
