@@ -3,10 +3,17 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 const StyledButton = styled.button`
-  opacity: ${(props) => (props.disabled ? '0.5' : '0')}
-  cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')}
-  border-radius: ${(props) => (props.corners ? '0px' : '4px')}
-  box-shadow: ${(props) => (props.shadow ? '' : '')}
+  opacity: ${(props) => (!props.disabled ? '1' : '0.5')};
+  cursor: ${(props) =>
+    !props.disabled ? 'pointer' : 'not-allowed !important'};
+  border-radius: ${(props) => (props.corners ? '0px' : '4px')};
+  box-shadow: ${(props) => (props.shadow ? '' : '')};
+  width: 7.5rem;
+  height: 4rem;
+  cursor: pointer;
+  &:focus {
+    outline: none;
+  }
 `;
 
 class Button extends Component {
@@ -15,7 +22,7 @@ class Button extends Component {
       <StyledButton
         onClick={this.props.clicked ? (e) => this.props.clicked(e) : null}
       >
-        Button
+        {this.props.children}
       </StyledButton>
     );
   }

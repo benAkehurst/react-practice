@@ -8,4 +8,5 @@ export default {
 
 // const buttonDefaults = {};
 
-export const Small = () => <Button size={'small'}>Small Button</Button>;
+export const Standard = () => <Button disabled={false}>Standard Button</Button>;
+export const Disabled = () => <Button disabled={true}>Disabled Button</Button>;

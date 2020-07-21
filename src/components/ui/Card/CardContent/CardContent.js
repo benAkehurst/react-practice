@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 const CardContent = styled.div``;
 const CardContentHeader = styled.header``;
@@ -34,8 +34,8 @@ const cardContent = (props) => {
 };
 
 cardContent.propTypes = {
-  // edges: PropTypes.string,
-  // // 'straight' | 'rounded' | 'curved'
+  edges: PropTypes.string,
+  // 'straight' | 'rounded' | 'curved'
 };
 
 export default cardContent;
